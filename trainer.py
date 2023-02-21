@@ -54,7 +54,6 @@ class Trainer():
             with tf.device(self.device):
                 x = tf.expand_dims(batch['x'],-1)
                 y = batch['y']
-                batch['pred_mask'] = self.model.model(x,training=False)
                 test_output = self.model.model.test_on_batch(x, y)
                 history = self.model.model.train_on_batch(x, y)
                 total_loss += test_output[0]
