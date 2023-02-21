@@ -6,7 +6,7 @@ SAMPLING_RATE = 16000
 N_d = 512  # window duration (samples)
 N_s = 128  # window shift (samples)
 K = 512  # number of frequency bins
-CHUNK_SIZE = 32 # temporal context 32 frames * 512 sample shift per frame / 16000 samples/sec = 0.25sec
+CHUNK_SIZE = 32 # temporal context 32 frames * 128 sample shift per frame / 16000 samples/sec = 0.256sec
 target = 'mask'
 action = 'train'
 BATCH_SIZE = 1
